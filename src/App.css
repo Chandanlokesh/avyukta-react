@@ -1,0 +1,202 @@
+@font-face {
+  font-family: 'SpaceNova';
+  src: url('../public/fonts/SpaceNova-6Rpd1.otf') format('opentype');
+}
+
+@font-face {
+  font-family: 'Megatrans';
+  src: url('../public/fonts/MegatransdemoRegular-8M9B0.otf') format('opentype');
+}
+
+
+
+.heading { font-family: 'SpaceNova', sans-serif; }
+.secondary-text { font-family: 'Megatrans', sans-serif; }
+
+        /* Fade-in animation */
+        @keyframes fadeInUp {
+          from {
+              opacity: 0;
+              transform: translateY(20px);
+          }
+          to {
+              opacity: 1;
+              transform: translateY(0);
+          }
+      }
+
+/* .timeline { */
+        
+        .heading {
+            font-family: 'SpaceNova', sans-serif;
+            animation: fadeInUp 1.5s ease-out;
+        }
+        .secondary-text {
+            font-family: 'Megatrans', sans-serif;
+        }
+
+        /* Timeline Animation */
+        .timeline-item {
+            opacity: 0;
+            transform: translateX(-30px);
+            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+        }
+        .timeline-item.show {
+            opacity: 1;
+            transform: translateX(0);
+        }
+
+        /* Collapsible Sections */
+        .timeline-content {
+            display: none;
+            transition: all 0.3s ease-in-out;
+        }
+
+        /* Open state */
+        .timeline-content.open {
+            display: block;
+        }
+
+        /* Dot Alignment Fix */
+        .timeline-item h3 {
+            padding-left: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .dot {
+            position: absolute;
+            left: -10px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 12px;
+            height: 12px;
+            background-color: #3b82f6;
+            border-radius: 50%;
+        }
+
+      /* } */
+
+/* .landing { */
+
+.heading {
+    font-family: 'SpaceNova', sans-serif;
+    animation: fadeInUp 1.5s ease-out;
+}
+.secondary-text {
+    font-family: 'Megatrans', sans-serif;
+}
+
+/* Keyframe animations */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Typing Effect */
+.typing-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.typing-text {
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid white;
+    width: 0;
+    animation: typing 2.5s steps(25, end) forwards, blink 0.75s step-end infinite;
+}
+/* } */
+
+/* .events { */
+
+  .heading { font-family: 'SpaceNova', sans-serif; }
+  .secondary-text { font-family: 'Megatrans', sans-serif; }
+
+  .event-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      cursor: pointer;
+      max-width: 1200px;
+      margin: auto;
+      margin-bottom: 2rem;
+  }
+
+  @media (min-width: 768px) {
+      .event-container { flex-direction: row; align-items: flex-start; }
+      .rules-box { max-width: 50%; }
+  }
+
+  .image-container {
+      position: relative;
+      width: 100%;
+      max-width: 400px;
+      height: 250px;
+      border-radius: 12px;
+      overflow: hidden;
+  }
+
+  .event-image { width: 100%; height: 100%; object-fit: cover; border-radius: 12px; transition: transform 0.3s ease-in-out; }
+  .image-container:hover .event-image { transform: scale(1.05); }
+
+  .event-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: rgba(0, 0, 0, 0.5);
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: white;
+      text-align: center;
+  }
+
+  .rules-box {
+      opacity: 0;
+      transform: translateX(-100%);
+      transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+      max-height: 0;
+      overflow: hidden;
+  }
+
+  .event-container.active .rules-box, .event-container:hover .rules-box {
+      opacity: 1;
+      transform: translateX(0);
+      max-height: 500px;
+  }
+
+  @media (max-width: 767px) {
+      .event-container { flex-direction: column; }
+      .rules-box { transform: translateY(-10px); max-width: 100%; }
+      .event-container.active .rules-box { transform: translateY(0); }
+  }
+/* } */
