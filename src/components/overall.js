@@ -65,15 +65,15 @@ const events = [
   
   const departments = [
     {
-      title: "Computer Science & Engineering",
-      image: "/images/mca.jpeg",
-      description: "Focused on software development, AI, and cybersecurity.",
+      title: "SMVIT",
+      image: "/images/smvit.jpg",
+      description: "Sir M. Visvesvaraya Institute of Technology (Sir MVIT), established in 1986 by the Sri Krishnadevaraya Educational Trust, is a premier higher education institution in Karnataka. It offers undergraduate programs in various engineering disciplines, including AI & Machine Learning, Biotechnology, Computer Science, and Robotics. Additionally, it provides postgraduate programs in M.Tech, MBA, and MCA. Affiliated with Visvesvaraya Technological University and approved by AICTE, the institute holds NAAC ‘A’ grade accreditation, with six programs accredited by NBA. Recognized as an R&D center, Sir MVIT emphasizes academic excellence, research, and industry collaboration to produce skilled professionals and innovators.",
     },
     {
-      title: "Electronics & Communication",
-      image: "/images/smvit.jpg",
-      description: "Exploring VLSI, embedded systems, and IoT applications.",
-    },
+      title: "Department of Computer Application",
+      image: "/images/mca.jpeg",
+      description: "The Department of Master of Computer Applications at Sir MVIT was established in 1998 and is equipped with modern laboratories, high-speed internet, and a dedicated library. It focuses on providing students with technical expertise, research opportunities, and industry exposure through seminars, workshops, and collaborations with the Computer Society of India. The department maintains strong industry ties, facilitating internships, projects, and placements. Its annual tech fest, “AVYUKTA,” attracts participants from across the city. With experienced faculty and innovative teaching methods, the department nurtures skilled professionals who have secured positions in top IT companies like Wipro, Infosys, Accenture, and Fidelity.",
+    }
   ];
   
   export { events, timelineData, departments };
@@ -95,12 +95,24 @@ const SectionTitle = ({ children }) => (
 const LandingSection = () => {
   return (
     <div className="landing bg-cover bg-center h-screen w-full flex flex-col justify-center items-center text-white relative overflow-hidden">
-      <div className="absolute inset-0 bg-black/50 backdrop-blur-sm"></div>
-      
-      <GlassMorphicContainer className="absolute top-4 left-4 md:top-8 md:left-8 p-2 hover:scale-105 transition-transform duration-300">
-        <img src="/images/logo.png" alt="Logo" className="h-16 md:h-18"/>
-      </GlassMorphicContainer>
-      
+      {/* Black Overlay */}
+      <div className="absolute inset-0 z-5"></div>
+
+      {/* Background Decorative Image */}
+      <img
+        src="/images/planet.png"
+        alt="Decorative"
+        className="absolute md:w-[40%] md:h-auto  opacity-70
+                   left-1/2 md:left-[60%] 
+                   transform -translate-x-[25%] md:translate-x-0 z-0"
+      />
+
+      {/* Logo */}
+      <div className="absolute top-4 left-4 md:top-8 md:left-8 p-2 hover:scale-105 transition-transform duration-300">
+        <img src="/images/logo.png" alt="Logo" className="h-16 md:h-32"/>
+      </div>
+
+      {/* Content */}
       <div className="relative flex flex-col items-center text-center px-4 md:px-0 z-10">
         <h1 className="text-4xl md:text-6xl font-bold font-explorer animate-[fadeIn_2s_ease-in-out] 
                      bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600">
@@ -122,6 +134,7 @@ const LandingSection = () => {
     </div>
   );
 };
+
 
 // Events Section
 const Events = () => {
@@ -147,7 +160,7 @@ const Events = () => {
                   className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                  <h3 className="text-xl md:text-2xl font-bold text-white">{event.title}</h3>
+                  <h3 className="text-xl md:text-2xl font-bold text-white ">{event.title}</h3>
                 </div>
               </div>
               
@@ -183,14 +196,14 @@ const Timeline = () => {
           {timelineData.map((event, index) => (
             <div key={index} 
                  className="timeline-item relative mb-8 transform transition-all duration-300 hover:translate-x-2">
-              <div className="absolute -left-9 top-1/2 w-3 h-3 bg-blue-600 rounded-full 
+              <div className="absolute -left-8 top-1/2 w-3 h-3 bg-blue-800 rounded-full 
                             transform -translate-y-1/2 transition-transform duration-300 hover:scale-150" />
               
               <div 
                 className="cursor-pointer"
                 onClick={() => setOpenIndex(openIndex === index ? null : index)}
               >
-                <h3 className="text-xl font-semibold text-white flex justify-between items-center">
+                <h3 className="text-xl font-semibold text-white flex justify-between items-center font-explorer">
                   {event.title}
                   <span className="text-gray-400 text-sm">{event.time}</span>
                 </h3>
@@ -245,7 +258,7 @@ const Department = () => {
     <section className="w-full py-12 px-4 md:px-12">
       <SectionTitle>DEPARTMENTS</SectionTitle>
       
-      <div className="max-w-6xl mx-auto flex flex-col gap-12">
+      <div className="max-w-4xl mx-auto flex flex-col gap-12">
         {departments.map((dept, index) => (
           <GlassMorphicContainer 
             key={index}
@@ -258,7 +271,7 @@ const Department = () => {
                 className="w-32 h-32 md:w-48 md:h-48 rounded-lg object-cover transition-transform duration-500 hover:scale-110"
               />
               <div>
-                <h3 className="text-2xl font-bold heading mb-2 text-white">{dept.title}</h3>
+                <h3 className="text-2xl font-bold font-explorer mb-2 text-white">{dept.title}</h3>
                 <p className="text-gray-300 text-sm">{dept.description}</p>
               </div>
             </div>

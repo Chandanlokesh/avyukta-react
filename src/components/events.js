@@ -148,8 +148,8 @@
 
 // export default Events;
 
-// import React, { useState, useEffect, useRef } from 'react';
-// import { useInView } from 'react-intersection-observer';
+import React, { useState, useEffect, useRef } from 'react';
+import { useInView } from 'react-intersection-observer';
 
 // const GlassMorphicContainer = ({ children, className = "" }) => (
 //   <div className={`backdrop-blur-md bg-white/10 rounded-2xl shadow-xl border border-white/20 transition-all duration-300 ${className}`}>
@@ -157,11 +157,11 @@
 //   </div>
 // );
 
-// const SectionTitle = ({ children }) => (
-//   <h2 className="text-3xl md:text-5xl font-bold heading text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-[fadeIn_1s_ease-in-out]">
-//     {children}
-//   </h2>
-// );
+const SectionTitle = ({ children }) => (
+  <h2 className="text-3xl md:text-5xl font-bold heading text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-[fadeIn_1s_ease-in-out]">
+    {children}
+  </h2>
+);
 
 // const EventCard = ({ event, index }) => {
 //   const [isActive, setIsActive] = useState(false);
@@ -237,93 +237,26 @@
 //     </div>
 //   );
 // };
-
-// const Events = () => {
-
-//   const events = [
-//     {
-//       title: "Hackathon",
-//       image: "/images/bgmi.jpeg",
-//       rules: [
-//         "Each team can have up to 4 members.",
-//         "The problem statement will be given on the spot.",
-//         "Use of AI tools is prohibited.",
-//         "Submission deadline is 3 hours.",
-//       ],
-//     },
-//     {
-//       title: "Code Sprint",
-//       image: "/images/paradox.jpeg",
-//       rules: [
-//         "Solo participation only.",
-//         "Each round will have 3 coding challenges.",
-//         "Top 10 participants move to the final round.",
-//         "No external help or online compiler allowed.",
-//       ],
-//     },
-//     {
-//       title: "Tech Quiz",
-//       image: "/images/pixionyx.jpeg",
-//       rules: [
-//         "Teams of 2 members are allowed.",
-//         "Multiple-choice questions based on technology trends.",
-//         "Each question has a 30-second time limit.",
-//         "Top 5 teams will qualify for the final round.",
-//       ],
-//     },
-//   ];
-
-//   return (
-//     <section className="w-full py-12 px-4 md:px-12">
-//       <SectionTitle>EVENTS</SectionTitle>
-      
-//       <div className="space-y-16">
-//         {events.map((event, index) => (
-//           <EventCard key={index} event={event} index={index} />
-//         ))}
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Events;
-
-
-import React, { useState, useEffect } from 'react';
-import { useInView } from 'react-intersection-observer';
-
-// const GlassMorphicContainer = ({ children, className = "", isActive }) => (
-//   <div className={`backdrop-blur-md bg-white/10 rounded-2xl shadow-xl border border-white/20 
-//                    transition-all duration-700 ease-in-out mx-auto
-//                    ${isActive ? 'md:w-[90%]' : 'md:w-[60%]'}
-//                    ${className}`}>
-//     {children}
-//   </div>
-// );
-
-const GlassMorphicContainer = ({ children, className = "", isActive }) => (
-  <div className={`backdrop-blur-md bg-white/10 rounded-2xl shadow-xl border border-white/20 
-                   transition-all duration-700 ease-in-out mx-auto overflow-hidden
-                   md:min-h-[350px] md:flex md:items-center
-                   ${isActive ? 'md:w-[90%]' : 'md:w-[60%]'}
-                   ${className}`}>
+const GlassMorphicContainer = ({ children, className = "" ,isActive}) => (
+  <div className={`absolute inset-0 opacity-0 transition-opacity duration-700 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 ${className}`}>
     {children}
   </div>
 );
 
-
-const SectionTitle = ({ children }) => (
-  <h2 className="text-3xl md:text-5xl font-bold heading text-center mb-10 bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-purple-600 animate-[fadeIn_1s_ease-in-out]">
-    {children}
-  </h2>
-);
-
-const EventCard = ({ event, index }) => {
+const EventCard = ({ event }) => {
   const [isActive, setIsActive] = useState(false);
-  const { ref, inView } = useInView({
-    threshold: 0.8,
-    triggerOnce: false
-  });
+  const [threshold, setThreshold] = useState(window.innerWidth < 768 ? 0.2 : 1);
+
+  useEffect(() => {
+    const updateThreshold = () => {
+      setThreshold(window.innerWidth < 768 ? 0.2 : 1);
+    };
+    
+    window.addEventListener("resize", updateThreshold);
+    return () => window.removeEventListener("resize", updateThreshold);
+  }, []);
+  
+  const { ref, inView } = useInView({ threshold, triggerOnce: false });
 
   useEffect(() => {
     if (inView) {
@@ -333,72 +266,70 @@ const EventCard = ({ event, index }) => {
     }
   }, [inView]);
 
-  return (
-    <div ref={ref} className="relative py-8">
-      <GlassMorphicContainer isActive={isActive}>
-        <div className="relative min-h-[400px] flex flex-col items-center 
-                      md:flex-row md:items-center
-                      transition-all duration-700 ease-in-out">
-          
-          {/* Content Container */}
-          {/* <div className={`w-full flex flex-col md:flex-row items-center
-                          transition-all duration-700 ease-in-out overflow-hidden
-                          ${isActive ? 'md:justify-between md:gap-4' : 'md:justify-center'}`}> */}
-            <div className={`w-full flex flex-col md:flex-row items-center gap-4
-                transition-all duration-700 ease-in-out overflow-hidden
-                ${isActive ? 'md:justify-between' : 'md:justify-center'}`}>
+//   return (
+//     <div ref={ref} className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden md:h-[300px]">
+//     {/* Background (Initially Hidden) */}
+//     <GlassMorphicContainer className={`${isActive ? 'opacity-100' : 'opacity-0'}`} isActive={isActive}/>
+  
+// {/* Image (Initially Center, Moves Left) */}
+// <div className={`relative transition-transform duration-700 ease-in-out z-20 ${isActive ? 'md:-translate-x-[0]' : 'translate-x-[150%]'}`}>
+//       <img src={event.image} alt={event.title} className="w-48 md:w-72 object-cover rounded-xl shadow-lg" />
+//     </div>
+//     {/* Rules (Initially Hidden, Fades In) */}
+//     <div className={`relative opacity-0 transition-opacity duration-700 w-full md:w-2/3 text-white p-4  text-left ${isActive ? 'opacity-100' : ''}`}>
+//       <h3 className="text-2xl font-bold mb-3">{event.title}</h3>
+//       <ul className="list-disc pl-5 space-y-1 text-gray-300">
+//         {event.rules.map((rule, index) => (
+//           <li key={index} className="text-sm">{rule}</li>
+//         ))}
+//       </ul>
+//     </div>
+        
+//   </div>
+//   );
+return (
+  <div className="relative w-full flex flex-col">
+    {/* Event Card */}
+    <div ref={ref} className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden md:h-[300px]">
+      {/* Background (Initially Hidden) */}
+      <GlassMorphicContainer className={`${isActive ? 'opacity-100' : 'opacity-0'}`} isActive={isActive} />
 
-            {/* Image Section */}
-            <div className={`relative w-full md:w-2/5 aspect-video overflow-hidden rounded-xl
-                            transition-all duration-700 ease-in-out transform
-                            ${isActive ? 'md:translate-x-[-5%]' : 'md:translate-x-0'}`}>
-              <img 
-                src={event.image} 
-                alt={event.title} 
-                className="w-full h-full object-cover"
-              />
-              <div className="absolute inset-0 bg-black/50 flex items-center justify-center">
-                <h3 className="text-xl md:text-2xl font-bold text-white">{event.title}</h3>
-              </div>
-            </div>
-            
-            {/* Rules Section */}
-            <div className={`w-full md:w-2/5 p-6 mt-4 md:mt-0
-                            transition-all duration-700 ease-in-out transform
-                            ${isActive ? 'opacity-100 md:translate-x-[5%]' : 
-                                       'md:opacity-0 md:translate-x-0'}`}>
-              <div className="space-y-4">
-                <h4 className="text-xl font-bold text-white">Rules:</h4>
-                <ul className="list-disc pl-5 space-y-2 text-gray-300">
-                  {event.rules.map((rule, i) => (
-                    <li key={i} className="text-sm">{rule}</li>
-                  ))}
-                </ul>
-                
-                {/* Mobile Register Button */}
-                <div className="md:hidden mt-6 flex justify-end">
-                  <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white 
-                                   font-semibold shadow-md transition duration-300">
-                    Register Now
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </GlassMorphicContainer>
-      
-      {/* Desktop Register Button */}
-      <div className="hidden md:block absolute right-0 bottom-0 transform translate-y-1/2 z-10">
-        <button className="px-6 py-2 bg-blue-600 hover:bg-blue-700 rounded-lg text-white 
-                         font-semibold shadow-md transition duration-300">
-          Register Now
-        </button>
+      {/* Image (Initially Center, Moves Left) */}
+      <div className={`relative transition-transform duration-700 ease-in-out z-20 ${isActive ? 'md:-translate-x-[0]' : 'translate-x-[150%]'}`}>
+        <img src={event.image} alt={event.title} className="w-48 md:w-72 object-cover rounded-xl shadow-lg" />
+      </div>
+
+      {/* Rules (Initially Hidden, Fades In) */}
+      <div className={`relative opacity-0 transition-opacity duration-700 w-full md:w-2/3 text-white p-4 text-left ${isActive ? 'opacity-100' : ''}`}>
+        <h3 className="text-2xl font-bold mb-3 font-explorer">{event.title}</h3>
+        <ul className="list-disc pl-5 space-y-1 text-gray-300">
+          {event.rules.map((rule, index) => (
+            <li key={index} className="text-sm">{rule}</li>
+          ))}
+        </ul>
       </div>
     </div>
-  );
+
+    {/* Button Aligned to Right */}
+    <div className="w-full flex justify-end mt-6">
+  <a
+    href="https://example.com" // Replace with your actual link
+    target="_blank"
+    rel="noopener noreferrer"
+    className={`px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
+                ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+  >
+    Learn More
+  </a>
+</div>
+  </div>
+);
+
+
 };
+
 const Events = () => {
+
   const events = [
     {
       title: "Paradox",
@@ -447,7 +378,7 @@ const Events = () => {
         "remote play is not allowed, all participants must be physically present.",
         "further instruction will be given on the event day."
       ],
-    }, 
+    },
     {
       title: "Blackhole escape",
       image: "/images/tresure-hunt.jpeg",
@@ -464,10 +395,10 @@ const Events = () => {
 
   return (
     <section className="w-full py-12 px-4 md:px-12">
-      <SectionTitle>EVENTS</SectionTitle>
+      <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 text-white">EVENTS</h2>
       <div className="space-y-16">
         {events.map((event, index) => (
-          <EventCard key={index} event={event} index={index} />
+          <EventCard key={index} event={event} />
         ))}
       </div>
     </section>

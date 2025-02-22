@@ -6,6 +6,7 @@ import Events from "./components/events";
 // import Department from "./components/department";
 // import Footer from "./components/footer";
 import "./App.css";
+import AnimatedCards from "./components/animatedcards";
 import {   LandingSection,
 
   Timeline,
