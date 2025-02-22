@@ -15,7 +15,7 @@ const events = [
     },
     {
       title: "Code Sprint",
-      image: "/images/paradox.jpg",
+      image: "/images/paradox.jpeg",
       rules: [
         "Solo participation only.",
         "Each round will have 3 coding challenges.",
@@ -25,7 +25,7 @@ const events = [
     },
     {
       title: "Tech Quiz",
-      image: "/images/pixionyx.jpg",
+      image: "/images/pixionyx.jpeg",
       rules: [
         "Teams of 2 members are allowed.",
         "Multiple-choice questions based on technology trends.",

@@ -1,13 +1,13 @@
 import React from "react";
 // import EventTimeline from "./components/timeline";
 // import LandingSection from "./components/landing-section";
-// import Events from "./components/events";
+import Events from "./components/events";
 // import Venue from "./components/venue";
 // import Department from "./components/department";
 // import Footer from "./components/footer";
 import "./App.css";
 import {   LandingSection,
-  Events,
+
   Timeline,
   Venue,
   Department,
