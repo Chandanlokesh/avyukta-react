@@ -10,7 +10,7 @@ const LandingSection = () => {
     
     <div className="flex flex-col items-center text-center px-4 md:px-0">
     
-        <h1 className="text-3xl md:text-5xl font-bold heading">AVYUKTA - 2K25</h1>
+        <h1 className="text-3xl md:text-5xl font-bold font-explorer">AVYUKTA - 2K25</h1>
 
   
         <div className="typing-container mt-3 md:mt-5 text-base md:text-2xl secondary-text">

@@ -12,7 +12,7 @@ const Events = () => {
     <h2 className="text-3xl md:text-5xl font-bold heading text-center mb-10">EVENTS</h2>
 
 <div id="eventsList">
-    <div className="event-container" onclick="toggleEvent(this)">
+<div className={`event-container ${activeEvent===1? "active ":""}`} onclick={()=>toggleEvent(1)}>
         <div className="image-container">
             <img src="/images/paradox.jpeg" alt="Event Name" className="event-image"/>
             <div className="event-overlay">PARADOX (capture the flag)</div>
@@ -42,8 +42,8 @@ disqualification.</li>
     </div>
 </div>
 <div id="eventsList">
-    <div className="event-container" onclick="toggleEvent(this)">
-        <div className="image-container">
+<div className={`event-container ${activeEvent===2? "active ":""}`} onclick={()=>toggleEvent(2)}>
+<div className="image-container">
             <img src="/images/pixionyx.jpeg" alt="Event Name" className="event-image"/>
             <div className="event-overlay">PIXIONYX (web designing)</div>
         </div>
@@ -71,8 +71,8 @@ disqualification.</li>
     </div>
 </div>
 <div id="eventsList">
-    <div className="event-container" onclick="toggleEvent(this)">
-        <div className="image-container">
+<div className={`event-container ${activeEvent===3? "active ":""}`} onclick={()=>toggleEvent(3)}>
+<div className="image-container">
             <img src="/images/quize.jpeg" alt="Event Name" className="event-image"/>
             <div className="event-overlay">QUANTUM QUEST (tech quiz)</div>
         </div>
@@ -99,8 +99,8 @@ disqualification.</li>
     </div>
 </div>
 <div id="eventsList">
-    <div className="event-container" onclick="toggleEvent(this)">
-        <div className="image-container">
+<div className={`event-container ${activeEvent===4? "active ":""}`} onclick={()=>toggleEvent(4)}>
+<div className="image-container">
             <img src="/images/bgmi.jpeg" alt="Event Name" className="event-image"/>
             <div className="event-overlay">COSMIC CLASH (bgmi)</div>
         </div>
@@ -132,8 +132,8 @@ disqualification.</li>
 </div>
 <div id="eventsList">
 
-    <div className="event-container" onclick="toggleEvent(this)">
-        <div className="image-container">
+<div className={`event-container ${activeEvent===5? "active ":""}`} onclick={()=>toggleEvent(5)}>
+<div className="image-container">
             <img src="/images/tresure-hunt.jpeg" alt="Event Name" className="event-image"/>
             <div className="event-overlay">BLACKHOLE ESCAPE (tresure hunt)</div>
         </div>
