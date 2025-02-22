@@ -296,7 +296,7 @@ return (
 
       {/* Image (Initially Center, Moves Left) */}
       <div className={`relative transition-transform duration-700 ease-in-out z-20 ${isActive ? 'md:-translate-x-[0]' : 'translate-x-[150%]'}`}>
-        <img src={event.image} alt={event.title} className="w-48 md:w-72 object-cover rounded-xl shadow-lg" />
+        <img src={event.image} alt={event.title} className="w-80 h-80 object-fit md:w-72 object-cover rounded-xl shadow-lg" />
       </div>
 
       {/* Rules (Initially Hidden, Fades In) */}
