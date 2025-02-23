@@ -238,7 +238,7 @@ const TimelineItem = ({ event, index, totalItems, isMobile }) => {
     <div className={`relative ${isMobile ? 'w-12 h-12' : 'w-16 h-16'}`}>
       {/* Image container */}
       <div 
-        className={`absolute inset-0 rounded-full overflow-hidden transition-all duration-1000 ease-in-out will-change-transform opacity-0
+        className={`absolute inset-0 rounded-full overflow-hidden transition-all duration-[3s] ease-in-out will-change-transform opacity-0
                     ${isMobile 
                       ? isActive 
                         ? 'translate-y-0 opacity-100' 
@@ -265,7 +265,7 @@ const TimelineItem = ({ event, index, totalItems, isMobile }) => {
       data-index={index}
     >
       {/* Vertical line */}
-      <div className="absolute left-4 top-0 w-1 h-full bg-blue-600" />
+      <div className="absolute left-4 top-0 w-1 h-full bg-blue-700" />
       
       {/* Marker Image */}
       <div className="absolute left-[-0.15rem] top-4">
@@ -367,7 +367,7 @@ const Timeline = () => {
           {isMobile ? (
             <div className="absolute left-4 top-0 w-1 h-full bg-blue-600" />
           ) : (
-            <div className="absolute top-16 left-0 w-full h-1 bg-blue-600" />
+            <div className="absolute top-20 left-0 w-full h-1 bg-blue-600" />
           )}
 
           {/* Timeline items */}

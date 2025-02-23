@@ -168,8 +168,8 @@ const LandingSection = () => {
       {/* Content Box */}
       <div className="relative flex flex-col items-center text-center px-6 md:px-10 z-10">
         {/* AVYUKTA Heading */}
-        <h1 className="text-3xl md:text-7xl font-extrabold font-explorer text-white animate-fadeIn">
-          AVYUKTA - 2K25
+        <h1 className="text-5xl md:text-7xl font-extrabold font-explorer text-white animate-fadeIn">
+          AVYUKTA  2K25
         </h1>
 
         {/* Subheading */}
@@ -195,7 +195,7 @@ const LandingSection = () => {
         </button>
 
         {/* Countdown Timer (spaced at the bottom) */}
-        <div className="mt-10 md:mt-16">
+        <div className="mt-40 md:mt-16">
           <CountdownTimer targetDate={eventDate} />
         </div>
       </div>

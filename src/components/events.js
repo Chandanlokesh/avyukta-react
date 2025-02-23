@@ -62,7 +62,7 @@ return (
     className={`px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
                 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
   >
-    Register ⇨
+    Register <span>➥</span>
   </a>
 </div>
   </div>
