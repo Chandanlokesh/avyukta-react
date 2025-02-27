@@ -101,26 +101,26 @@ const Timeline = () => {
   const timelineData = [
     {
       title: "Registrations Open",
-      time: "10st March 2025",
-      details: "Participants can start registering for the event online.",
+      time: "1st March 2025",
+      details: "Participants can start registering for the event.",
       image: "/images/timeline/register.png" // Replace with your image paths
     },
     {
       title: "Event Begins",
       time: "10th March 2025, 10:00 AM",
-      details: "Participants receive the problem statement and start working.",
+      details: "Participants can proceed to the designated event venue.",
       image: "/images/timeline/start.png"
     },
     {
       title: "Lunch Break",
       time: "10th March 2025, 1:00 PM",
-      details: "A break for participants to refresh and recharge.",
+      details: "A break for participants to relax and recharge.",
       image: "/images/timeline/food.png"
     },
     {
       title: "Final Presentations",
       time: "10th March 2025, 4:00 PM",
-      details: "Teams will present their solutions to the judges.",
+      details: "The remaining rounds of presentations will continue.",
       image: "/images/timeline/presentation.png"
     },
     {
@@ -130,6 +130,7 @@ const Timeline = () => {
       image: "/images/timeline/result.png"
     },
   ];
+  
 
   useEffect(() => {
     const handleResize = () => {
