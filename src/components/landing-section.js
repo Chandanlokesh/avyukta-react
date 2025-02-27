@@ -31,13 +31,41 @@ const CountdownTimer = ({ targetDate }) => {
   }, []);
 
   return (
-    <GlassMorphicContainer className="flex flex-col items-center px-6 py-4 text-white bg-white/10 backdrop-blur-md rounded-lg shadow-lg  md:w-80">
-      {/* <div className="flex items-center gap-2 text-md md:text-xl font-semibold text-purple-300">
-        <Calendar size={20} /> Event Starts In:
-      </div> */}
-      <p className="text-md md:text-2xl">
-        {`${timeLeft.days}d ${timeLeft.hours}h ${timeLeft.minutes}m ${timeLeft.seconds}s`}
-      </p>
+    <GlassMorphicContainer className="flex flex-col items-center px-6 py-4 text-white bg-white/10 backdrop-blur-md rounded-lg shadow-lg font-explorer md:w-120">
+      <div className="flex flex-row gap-4 md:gap-8">
+          <div key={1} className="flex flex-col items-center">
+            <div className="text-3xl md:text-5xl font-bold text-white mb-1">
+            {timeLeft.days}
+            </div>
+            <div className="text-xs md:text-sm font-medium text-purple-300 tracking-wider">
+              Days
+            </div>
+          </div>
+          <div key={2} className="flex flex-col items-center">
+            <div className="text-3xl md:text-5xl font-bold text-white mb-1">
+            {timeLeft.hours}
+            </div>
+            <div className="text-xs md:text-sm font-medium text-purple-300 tracking-wider">
+              Hours
+            </div>
+          </div>
+          <div key={3} className="flex flex-col items-center">
+            <div className="text-3xl md:text-5xl font-bold text-white mb-1">
+            {timeLeft.minutes}
+            </div>
+            <div className="text-xs md:text-sm font-medium text-purple-300 tracking-wider">
+              Minutes
+            </div>
+          </div>
+          <div key={4} className="flex flex-col items-center">
+            <div className="text-3xl md:text-5xl font-bold text-white mb-1">
+            {timeLeft.seconds}
+            </div>
+            <div className="text-xs md:text-sm font-medium text-purple-300 tracking-wider">
+             Seconds
+            </div>
+          </div>
+      </div>
     </GlassMorphicContainer>
   );
 };
