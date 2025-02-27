@@ -14,12 +14,21 @@
     src: url("../public/fonts/SPACE\ EXPLORER.ttf") format('opentype');
 }
 
+@font-face {
+  font-family: 'space-mono';
+  src: url("../public/fonts/SpaceMono-Regular.ttf");
+}
+
 .font-explorer {
     font-family: 'space-explorer', sans-serif;
 }
 
 .font-megatrans {
   font-family: 'Megatrans',sans-serif;
+}
+
+.font-space-mono {
+  font-family: 'space-mono', sans-serif;
 }
 
 .heading { font-family: 'SpaceNova', sans-serif; }

@@ -71,7 +71,7 @@ const TimelineItem = ({ event, index, totalItems, isMobile }) => {
   ) : (
     <div 
       ref={ref}
-      className="timeline-marker flex flex-col items-center w-48"
+      className="timeline-marker flex flex-col items-center w-54"
       data-index={index}
     >
       {/* Date/Time */}
@@ -89,7 +89,7 @@ const TimelineItem = ({ event, index, totalItems, isMobile }) => {
       <div className={`mt-6 text-center transition-all duration-500 transform
                     ${isActive ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <h3 className="text-lg font-semibold text-white mb-2">{event.title}</h3>
-        <p className="text-sm text-gray-400">{event.details}</p>
+        <p className="text-xs text-gray-400">{event.details}</p>
       </div>
     </div>
   );
@@ -101,7 +101,7 @@ const Timeline = () => {
   const timelineData = [
     {
       title: "Registrations Open",
-      time: "1st March 2025",
+      time: "10th March 2025, 09:00 AM",
       details: "Participants can start registering for the event.",
       image: "/images/timeline/register.png" // Replace with your image paths
     },
@@ -146,7 +146,7 @@ const Timeline = () => {
     <section className="w-full py-12 px-4 md:px-12">
       <SectionTitle>EVENT TIMELINE</SectionTitle>
       
-      <GlassMorphicContainer className="max-w-6xl mx-auto p-6">
+      <GlassMorphicContainer className="max-w-8xl mx-auto p-6 font-space-mono">
         <div className="relative">
           {/* Base line */}
           {isMobile ? (

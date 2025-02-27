@@ -20,7 +20,7 @@ const Venue = () => {
 
         <GlassMorphicContainer className="p-6 hover:bg-white/20">
           <h3 className="text-2xl font-bold font-explorer mb-4 text-white">Details</h3>
-          <p className="text-gray-300 text-sm space-y-2 ">
+          <p className="text-gray-300 text-sm space-y-2 font-space-mono ">
             Sir M Visvesvaraya Institute of Technology,<br/>
             MBA & MCA Block,<br/>
             Krishnadevaraya Nagar, Hunasamaranahalli,<br/>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { useInView } from 'react-intersection-observer';
-
+import { Phone } from "lucide-react";
 const GlassMorphicContainer = ({ children, className = "" ,isActive}) => (
   <div className={`absolute inset-0 opacity-0 transition-opacity duration-700 bg-white/10 backdrop-blur-md rounded-2xl shadow-xl border border-white/20 ${className}`}>
     {children}
@@ -33,7 +33,7 @@ const EventCard = ({ event }) => {
 return (
   <div className="relative w-full md:w-[75%]  flex flex-col">
     {/* Event Card */}
-    <div ref={ref} className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden md:h-[300px]">
+    <div ref={ref} className="relative w-full flex flex-col md:flex-row items-center justify-center overflow-hidden md:min-h-[300px]">
       {/* Background (Initially Hidden) */}
       <GlassMorphicContainer className={`${isActive ? 'opacity-100' : 'opacity-0'}`} isActive={isActive} />
 
@@ -47,9 +47,18 @@ return (
         <h3 className="text-2xl font-bold mb-3 font-explorer">{event.title}</h3>
         <ul className="list-disc pl-5 space-y-1 text-gray-300 ">
           {event.rules.map((rule, index) => (
-            <li key={index} className="text-sm">{rule}</li>
+            <li key={index} className="text-sm font-space-mono">{rule}</li>
           ))}
         </ul>
+        <div className="flex flex-col md:flex-row">
+  {event.contact.map((contact, index) => (
+    <div key={index} className="flex items-center bg-[#03013B] text-white rounded-[20px] md:mx-4 my-2 py-2 px-3 w-fit">
+      <Phone size={24} className="text-white mr-2" /> 
+      {contact}
+    </div>
+  ))}
+</div>
+
       </div>
     </div>
 
@@ -59,7 +68,7 @@ return (
     href={"https://forms.gle/swkM821nCRSwSjDj8"} // Replace with your actual link
     target="_blank"
     rel="noopener noreferrer"
-    className={`px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
+    className={`px-6 py-3 font-space-mono text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
                 ${isActive ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
   >
     Register <span>➥</span>
@@ -86,10 +95,10 @@ const Events = () => {
         "Personal gadgets like phones and smartwatches are not allowed",
         "Any form of malpractice will lead to immediate disqualification.",
         "Detailed rules will be provided on the day of event",
-        "souvik - 9932903030  tharun - 7672007115"
 
       ],
-      register:""
+      contact:["souvik - 9932903030", " tharun - 7672007115"],
+
     },
     {
       title: "Pixionyx",
@@ -102,10 +111,9 @@ const Events = () => {
         "Teams are not allowed to communicate with other teams or external sources during the competition",
         "Participants must bring their own laptops and necessary equipment",
         "The organizers' decisions are final and binding.",
-        "Shreya - 9448825790  Tejasvi - 6362245832"
 
       ],
-      register:""
+      contact:["Shreya - 9448825790 ", "Tejasvi - 6362245832"]
     },
     {
       title: "Quantum Quest",
@@ -117,10 +125,9 @@ const Events = () => {
         "Mobile phones and smart devices are strictly prohibited.",
         "Any form of malpractice will result in immediate disqualification of the team..",
         "The judges' decision will be final.",
-        "Kavya - 8792023623  Shilpa - 6361653497"
 
       ],
-      register:""
+      contact:["Kavya - 8792023623" , "Shilpa - 6361653497"]
     },
     {
       title: "Cosmic clash",
@@ -134,10 +141,9 @@ const Events = () => {
         "remote play is not allowed, all participants must be physically present.",
         "further instruction will be given on the event day.",
         "No external help is allowed ",
-        "Sushanth - 63638121559  PUNITH - 6366684784"
 
       ],
-      register:""
+      contact:["Sushanth - 63638121559" , "PUNITH - 6366684784"]
     },
     {
       title: "Blackhole escape",
@@ -150,14 +156,13 @@ const Events = () => {
         "Participants are not allowed to use mobile phones during the competition.Unless exploitly permitted by the organizers",
         "Teams are not allowed to communicate with other teams or external sources during the competition.",
         "Results will be announced on the spot",
-        "Balaji - 8073667200 Manasa - 6363366840"
       ],
-      register:""
+      contact:["Balaji - 8073667200", "Manasa - 6363366840"]
     },
   ];
 
   return (
-    <section className=" relative w-full py-12 px-4 md:px-12 items-center">
+    <section className=" relative w-full pb-12 px-4 md:px-12 items-center">
       <h2 className="text-3xl md:text-5xl font-bold text-center mb-10 text-white  font-explorer z-10">EVENTS</h2>
       <div className="flex flex-col items-center space-y-16">
       {events.map((event, index) => (
