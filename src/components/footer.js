@@ -12,7 +12,7 @@ const Footer = () => {
               <strong>Student Coordinator:</strong> Chandan L - 8317335589 | Supriya - 9535247953
             </p>
             <p className="text-gray-300">
-              <strong>Faculty Coordinator:</strong> Dr. Jane Smith - +91 XXXXXXXXXX
+              <strong>Faculty Coordinator:</strong> Sneha Bharti - 9845292566 | Vani Harave - 9901996025
             </p>
           </div>
           

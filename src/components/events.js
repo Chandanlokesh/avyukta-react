@@ -56,7 +56,7 @@ return (
     {/* Button Aligned to Right */}
     <div className="w-full flex justify-end mt-6">
   <a
-    href={event.register} // Replace with your actual link
+    href={"https://forms.gle/swkM821nCRSwSjDj8"} // Replace with your actual link
     target="_blank"
     rel="noopener noreferrer"
     className={`px-6 py-3 text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
@@ -78,13 +78,16 @@ const Events = () => {
       title: "Paradox",
       image: "/images/paradox.jpeg",
       rules: [
+        "Each team consists of one - three members",
         "Participants must have basic computer and programming",
         "Challenges involve solving coding problems and finding hidden files to retrieve flags.",
         "Points are awarded for each flag found, and the highestscoring team wins.",
         "Internet use is allowed, but AI tools are strictly prohibited",
         "Personal gadgets like phones and smartwatches are not allowed",
         "Any form of malpractice will lead to immediate disqualification.",
-        "Detailed rules will be provided on the day of event"
+        "Detailed rules will be provided on the day of event",
+        "souvik - 9932903030  tharun - 7672007115"
+
       ],
       register:""
     },
@@ -92,12 +95,15 @@ const Events = () => {
       title: "Pixionyx",
       image: "/images/pixionyx.jpeg",
       rules: [
+        "Each team consists of two members",
         "Participants must adhere to the time allocated for each round.",
         "Participants are not allowed to use mobile phones or other gadgets during the competition, unless explicitly permitted by the organizers.",
         "Any form of plagiarism or copyright infringement will result in disqualification.",
         "Teams are not allowed to communicate with other teams or external sources during the competition",
         "Participants must bring their own laptops and necessary equipment",
-        "The organizers' decisions are final and binding."
+        "The organizers' decisions are final and binding.",
+        "Shreya - 9448825790  Tejasvi - 6362245832"
+
       ],
       register:""
     },
@@ -105,11 +111,14 @@ const Events = () => {
       title: "Quantum Quest",
       image: "/images/quize.jpeg",
       rules: [
+        "Each team consists of two members",
         "Rules for each round will be disclosed on the spot.",
         "All rounds will focus on programming languages, computer networks, databases, and current trends, etc in technology.",
         "Mobile phones and smart devices are strictly prohibited.",
         "Any form of malpractice will result in immediate disqualification of the team..",
-        "The judges' decision will be final."
+        "The judges' decision will be final.",
+        "Kavya - 8792023623  Shilpa - 6361653497"
+
       ],
       register:""
     },
@@ -117,12 +126,16 @@ const Events = () => {
       title: "Cosmic clash",
       image: "/images/bgmi.jpeg",
       rules: [
+        "Each team consists of four members",
         "any foul play or cheating, includes aimbot, game client modifications, and exploiting bugs or glitches, will result in immediate disqualification.",
         "only ios and android mobile phones are allowed, emulators and tablets are strictly prohibited.",
         "participants must be ready with their required accessories before joining the game.",
         "participants must bring their own headphones and chargers.",
         "remote play is not allowed, all participants must be physically present.",
-        "further instruction will be given on the event day."
+        "further instruction will be given on the event day.",
+        "No external help is allowed ",
+        "Sushanth - 63638121559  PUNITH - 6366684784"
+
       ],
       register:""
     },
@@ -130,12 +143,14 @@ const Events = () => {
       title: "Blackhole escape",
       image: "/images/tresure-hunt.jpeg",
       rules: [
+        "Each team consists of four members",
         "All team members must be accompanied by their allotted volunteers throughout the event.",
         "Team must follow all round-specifid rules which will be provided on the spot",
         "Participants are responsible for taking care of their own belongings",
         "Participants are not allowed to use mobile phones during the competition.Unless exploitly permitted by the organizers",
         "Teams are not allowed to communicate with other teams or external sources during the competition.",
-        "Results will be announced on the spot"
+        "Results will be announced on the spot",
+        "Balaji - 8073667200 Manasa - 6363366840"
       ],
       register:""
     },
