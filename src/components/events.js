@@ -88,7 +88,7 @@ const Events = () => {
       image: "/images/paradox.jpeg",
       rules: [
         "Each team consists of one - three members",
-        "Participants must have basic computer and programming",
+        "Participants must have basic computer and programming knowledge",
         "Challenges involve solving coding problems and finding hidden files to retrieve flags.",
         "Points are awarded for each flag found, and the highestscoring team wins.",
         "Internet use is allowed, but AI tools are strictly prohibited",
