@@ -102,35 +102,34 @@ const Timeline = () => {
     {
       title: "Registrations Open",
       time: "10th March 2025, 09:00 AM",
-      details: "Participants can start registering for the event.",
-      image: "/images/timeline/register.png" // Replace with your image paths
+      details: "Participants must register and collect their ID cards before proceeding to the venue.",
+      image: "/images/timeline/register.png"
     },
     {
       title: "Event Begins",
       time: "10th March 2025, 10:00 AM",
-      details: "Participants can proceed to the designated event venue.",
+      details: "The event officially starts. Participants must be present on time.",
       image: "/images/timeline/start.png"
     },
     {
       title: "Lunch Break",
       time: "10th March 2025, 1:00 PM",
-      details: "A break for participants to relax and recharge.",
+      details: "A lunch break for participants to relax and recharge before the next rounds.",
       image: "/images/timeline/food.png"
     },
     {
-      title: "Final Presentations",
-      time: "10th March 2025, 4:00 PM",
-      details: "The remaining rounds of presentations will continue.",
+      title: "Event Rounds Continue",
+      time: "10th March 2025, 1:50 PM",
+      details: "The remaining rounds of the event resume. Participants must be back on time.",
       image: "/images/timeline/presentation.png"
     },
     {
       title: "Winners Announcement",
-      time: "10th March 2025, 6:00 PM",
-      details: "Winners will be announced and awarded prizes.",
+      time: "10th March 2025, 5:00 PM",
+      details: "Winners will be announced and awarded prizes. All participants are expected to attend.",
       image: "/images/timeline/result.png"
-    },
+    }
   ];
-  
 
   useEffect(() => {
     const handleResize = () => {
