@@ -24,7 +24,7 @@ const Venue = () => {
             Sir M Visvesvaraya Institute of Technology,<br/>
             MBA & MCA Block,<br/>
             Krishnadevaraya Nagar, Hunasamaranahalli,<br/>
-            International Airport Road, Bangalore - 562157
+            International Airport Road, Bengaluru - 562157
           </p>
         </GlassMorphicContainer>
       </div>

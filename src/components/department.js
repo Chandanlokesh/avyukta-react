@@ -5,14 +5,14 @@ const Department = () => {
     {
       title: "Sir M. Visvesvaraya Institute Of Technology",
       image: "/images/smvit.jpg",
-      description: "The Department of Master of Computer Applications at Sir MVIT was established in 1998 and is equipped with modern laboratories, high-speed internet, and a dedicated library. It focuses on providing students with technical expertise, research opportunities, and industry exposure through seminars, workshops, and collaborations with the Computer Society of India. The department maintains strong industry ties, facilitating internships, projects, and placements. Its annual tech fest, “AVYUKTA,” attracts participants from across the city. With experienced faculty and innovative teaching methods, the department nurtures skilled professionals who have secured positions in top IT companies like Wipro, Infosys, Accenture, and Fidelity.",
+      description: "The Department of Master of Computer Applications at Sir MVIT was established in 1998 and is equipped with modern laboratories, high-speed internet, and a dedicated library. It focuses on providing students with technical expertise, research opportunities, and industry exposure through seminars, workshops, and collaborations with the Computer Society of India. The department maintains strong industry ties, facilitating internships, projects, and placements.With experienced faculty and innovative teaching methods, the department nurtures skilled professionals who have secured positions in top IT companies like Wipro, Infosys, Accenture, and Fidelity.",
       website:"https://www.sirmvit.edu/" ,
       sitetitle:"Official website"
     },
     {
       title: " Department of Master of Computer Applications",
       image: "/images/mca.jpeg",
-      description: "The Department of Master of Computer Applications at Sir MVIT was established in 1998 and is equipped with modern laboratories, high-speed internet, and a dedicated library. It focuses on providing students with technical expertise, research opportunities, and industry exposure through seminars, workshops, and collaborations with the Computer Society of India. The department maintains strong industry ties, facilitating internships, projects, and placements. Its annual tech fest, “AVYUKTA,” attracts participants from across the city. With experienced faculty and innovative teaching methods, the department nurtures skilled professionals who have secured positions in top IT companies like Wipro, Infosys, Accenture, and Fidelity.",
+      description: "The Department of Master of Computer Applications at Sir MVIT was established in 1998 and is equipped with modern laboratories, high-speed internet, and a dedicated library. It focuses on providing students with technical expertise, research opportunities, and industry exposure through seminars, workshops, and collaborations with the Computer Society of India. The department maintains strong industry ties, facilitating internships, projects, and placements.With experienced faculty and innovative teaching methods, the department nurtures skilled professionals who have secured positions in top IT companies like Wipro, Infosys, Accenture, and Fidelity.",
       webiste:"https://www.youtube.com/@SIRMVIT-MCA/videos",
       sitetitle:"MCA YouTube Channel"
     }

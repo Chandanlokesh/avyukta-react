@@ -91,7 +91,7 @@ const EventCard = ({ event }) => {
       {/* Button Aligned to Right */}
       <div className="w-full flex justify-end mt-6">
         <a
-          href={"https://forms.gle/swkM821nCRSwSjDj8"} // Replace with your actual link
+          href={event.link} // Replace with your actual link
           target="_blank"
           rel="noopener noreferrer"
           className={`px-6 py-3 font-space-mono text-white font-semibold rounded-lg shadow-lg transition-opacity duration-700 bg-gradient-to-r from-[#313272] to-[#27C2F6] hover:opacity-90 
@@ -121,6 +121,7 @@ const Events = () => {
         "Detailed rules will be provided on the day of the event."
       ],
       contact: ["Souvik - 9932903030", " Tharun - 7672007115"],
+      link: "https://forms.gle/RWfa5gUcFccm3sXb9"
     },
     {
       title: "Pixionyx",
@@ -133,9 +134,11 @@ const Events = () => {
         "Any form of plagiarism or copyright infringement will result in disqualification.",
         "Teams are not allowed to communicate with other teams or external sources during the competition.",
         "Participants must bring their own laptops and necessary equipment.",
+        "Rules for each round will be provided on the spot",
         "The organizers' decisions are final and binding.",
       ],
       contact: ["Shreya - 9448825790", "Tejasvi - 6362245832"],
+      link:"https://forms.gle/a2yh9kPGqP79MSwp8"
     },
 
     {
@@ -151,6 +154,7 @@ const Events = () => {
         "The judges' decision will be final.",
       ],
       contact: ["Kavya - 8792023623", "Shilpa - 6361653497"],
+      link:"https://forms.gle/gbJUEoMaMR1mhmpu5"
     },
 
     {
@@ -168,6 +172,7 @@ const Events = () => {
         "No external help is allowed.",
       ],
       contact: ["Sushanth - 6363821559", "Punith - 6366684784"],
+      link:"https://forms.gle/zEwVkVa6LTo5s95x5"
     },
 
     {
@@ -184,6 +189,7 @@ const Events = () => {
         "Results will be announced on the spot.",
       ],
       contact: ["Balaji - 8073667200", "Manasa - 6363366840"],
+      link:"https://forms.gle/qEVebpGSJjNWo3iK9"
     },
   ];
 
