@@ -101,7 +101,7 @@ const Timeline = () => {
   const timelineData = [
     {
       title: "Registrations Open",
-      time: "10th March 2025, 09:00 AM",
+      time: "04th March 2025, 09:00 AM",
       details: "Participants must register and collect their ID cards before proceeding to the venue.",
       image: "/images/timeline/register.png"
     },
