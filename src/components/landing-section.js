@@ -81,11 +81,11 @@ const LandingSection = () => {
             INTELLIGENCE MEETS EXCELLENCE
           </p>
         </div>
-        <div className="mt-3 px-6 py-3 rounded-lg bg-white/10 backdrop-blur-md shadow-lg">
+        {/* <div className="mt-3 px-6 py-3 rounded-lg bg-white/10 backdrop-blur-md shadow-lg">
           <p className="text-lg md:text-2xl font-extrabold bg-gradient-to-r from-blue-300 to-purple-400 text-transparent bg-clip-text tracking-widest">
             EXCLUSIVE FOR MCA & BCA
           </p>
-        </div>
+        </div> */}
 
         <p className="mt-3 text-md md:text-2xl text-white/80 flex items-center gap-2">
           <Calendar size={22} /> March 10, 2025
