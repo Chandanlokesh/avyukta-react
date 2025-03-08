@@ -5,23 +5,23 @@ const RegistrationStatsList = () => {
   // Array with competition names and deployment IDs
   const competitions = [
     {
-      name: 'Paradox',
+      name: 'Paradox (CTF)',
       sheetUrl: 'https://script.google.com/macros/s/AKfycbxyYrWBpgkQ71w8qhn7x5QHX0btVttd50QdGUClUa05Zkly-CaXzSUx4bugIiK838BoxA/exec' // Replace with actual deployment ID
     },
     {
-        name:'Black Hole Escape',
+        name:'Black Hole Escapen(treasure hunt)',
         sheetUrl:"https://script.google.com/macros/s/AKfycby5zWCDKne8ChXsSPebF83783ts48QmtRbdMlGJy5LzQqCdOwi8sXriaIUAds1dxVXE/exec",
     },
     {
-        name:'Pxionyx',
+        name:'Pxionyx (web design)',
         sheetUrl:'https://script.google.com/macros/s/AKfycbzPVx7U8o-PRv0rknefG2ZAobkQUIZ43VQ_UImzqI4Yr72aY8c_3aC0oiAQJS8Dyrqh/exec'
     },
     {
-        name:'Cosmic Clash',
+        name:'Cosmic Clash (BGMI)',
         sheetUrl:'https://script.google.com/macros/s/AKfycbwCG86_1cYRgcPZqWQ-EGvJBXWRetX8mz6SO0jDsMbYIdEIg_9G_HPSsD7aScaIEsw/exec'
     },
     {
-        name:'Quantum Quest',
+        name:'Quantum Quest (quiz)',
         sheetUrl:'https://script.google.com/macros/s/AKfycby1Ab45GM5B4P3Tpl1vssNDuctodRSHfBQQ3eZ_eYPvFW4xXwxIP0BCWI0ny02Y_nou/exec'
     }
   ];
