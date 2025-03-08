@@ -107,7 +107,7 @@ const EventCard = ({ event }) => {
 const Events = () => {
   const events = [
     {
-      title: "Paradox",
+      title: "Paradox (Capture The Flag)",
       image: "/images/paradox.jpeg",
       rules: [
         "The registration fee is ₹250 per team.",
@@ -124,7 +124,7 @@ const Events = () => {
       link: "https://forms.gle/RWfa5gUcFccm3sXb9"
     },
     {
-      title: "Pixionyx",
+      title: "Pixionyx (Web Designing)",
       image: "/images/pixionyx.jpeg",
       rules: [
         "Each team consists of two members.",
@@ -142,7 +142,7 @@ const Events = () => {
     },
 
     {
-      title: "Quantum Quest",
+      title: "Quantum Quest (Quiz)",
       image: "/images/quize.jpeg",
       rules: [
         "Each team consists of two members.",
@@ -158,7 +158,7 @@ const Events = () => {
     },
 
     {
-      title: "Cosmic Clash",
+      title: "Cosmic Clash (BGMI)",
       image: "/images/bgmi.jpeg",
       rules: [
         "Each team consists of four members.",
@@ -176,7 +176,7 @@ const Events = () => {
     },
 
     {
-      title: "Blackhole Escape",
+      title: "Blackhole Escape (Tresure Hunt)",
       image: "/images/tresure-hunt.jpeg",
       rules: [
         "Each team consists of four members.",
